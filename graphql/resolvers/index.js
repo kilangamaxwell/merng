@@ -1,10 +1,13 @@
 //import resolvers for users and posts
-const postsResolver = require("./posts");
-const usersResolver = require("./users");
+const postsResolvers = require("./posts");
+const usersResolvers = require("./users");
 
 //combine and export both resolvers
 module.exports = {
   Query: {
-    ...postsResolver.Query,
+    ...postsResolvers.Query,
+  },
+  Mutation: {
+    ...usersResolvers.Mutation,
   },
 };
